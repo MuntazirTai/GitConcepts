@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #preloader {
+  overflow: hidden;
+  background: #fff;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: fixed;
+  z-index: 9999;
+  opacity: 0;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.spinner {
+  position: absolute;
+  top: 36%;
+  left: 50%;
+  z-index: 1;
+  height: 40px;
+  width: 40px;
+  transform: translate(-50%, -50%);
+}
+
+[class^="ball-"] {
+  position: absolute;
+  display: block;
+  left: 30px;
+  width: 12px;
+  height: 12px;
+  border-radius: 6px;
+  transition: all 0.5s;
+  animation: circleRotate 4s both infinite;
+  transform-origin: 0 250% 0;
+}
+
+@keyframes circleRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(1440deg);
+  }
+}
+
+.ball-1 {
+  z-index: -1;
+  background-color: #ffd700;
+  animation-timing-function: cubic-bezier(0.5, 0.3, 0.9, 0.9);
+}
+
+.ball-2 {
+  z-index: -2;
+  background-color: #03a9f4;
+  animation-timing-function: cubic-bezier(0.5, 0.6, 0.9, 0.9);
+}
+
+.ball-3 {
+  z-index: -3;
+  background-color: #c8102e;
+  animation-timing-function: cubic-bezier(0.5, 0.9, 0.9, 0.9);
+}
+
+.ball-4 {
+  z-index: -4;
+  background-color: #009688;
+  animation-timing-function: cubic-bezier(0.5, 1.2, 0.9, 0.9);
+}
+
+.ball-5 {
+  z-index: -5;
+  background-color: #ff7f50;
+  animation-timing-function: cubic-bezier(0.5, 1.5, 0.9, 0.9);
+}
+
+.ball-6 {
+  z-index: -6;
+  background-color: #8bc34a;
+  animation-timing-function: cubic-bezier(0.5, 1.8, 0.9, 0.9);
+}
+
+.ball-7 {
+  z-index: -7;
+  background-color: #cddc39;
+  animation-timing-function: cubic-bezier(0.5, 2.1, 0.9, 0.9);
+}
+
+.ball-8 {
+  z-index: -8;
+  background-color: #c8102e;
+  animation-timing-function: cubic-bezier(0.5, 2.4, 0.9, 0.9);
+}
+.msg1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin-left: 23px;
+    margin-top: 61px;
+}
+
+
+/* body {
+ 
+} */
+.waviy {
+  
+  position: relative;
+  -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0,0,0,.2));
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  opacity: 0;
+  animation: fadeIn 0.5s ease forwards;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.waviy span {
+  position: relative;
+  display: inline-block;
+  font-size: 40px;
+  color: #fff;
+  /* text-transform: uppercase; */
+  animation: waviy 1.5s infinite;
+  animation-delay: calc(.1s * var(--i));
+  word-spacing: 10px; /* adjust the value to your preference */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* add a font shadow */
+}
+
+@keyframes waviy {
+  0%,40%,100% {
+    transform: translateY(0);
+    color: #c8102e;
+  }
+  20% {
+    transform: translateY(-20px);
+    color: #ff7f50;
+  }
+}
+
+  </style>
+
+</head>
+<body>
+  <div id="preloader"><div class="spinner"><span class="ball-1"></span><span class="ball-2"></span><span class="ball-3"></span><span class="ball-4"></span><span class="ball-5"></span><span class="ball-6"></span><span class="ball-7"></span><span class="ball-8"></span></div> 
+  <div class="waviy">
+    <span style="--i:1"> Please</span>&nbsp;&nbsp; <span style="--i:2"> wait </span> 
+    &nbsp;&nbsp;<span style="--i:3">Your</span> 
+    &nbsp;&nbsp;<span style="--i:4">PDF</span> 
+    &nbsp;&nbsp;<span style="--i:5">Genrated</span> 
+  </div>
+</div>
+ 
+</body>
+</html>
